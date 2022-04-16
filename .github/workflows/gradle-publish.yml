@@ -40,5 +40,5 @@ jobs:
       with:
         arguments: publish
       env:
-        USERNAME: 'Jacobs-Develop'
+        USERNAME: ${{ secrets.NBS_USER }}
         TOKEN: ${{ secrets.NBS_PAT }}
