@@ -10,14 +10,19 @@ repositories {
     mavenCentral()
 }
 
+ext {
+    GITHUB_USER = System.getenv("GITHUB_MAIN")
+    GITHUB_PAT = System.getenv("NBS_PAT")
+}
+
 publishing {
     repositories {
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Nano-Beta-Studios/GJAPI")
             credentials {
-                username = 'Jacobs-Develop'
-                password = System.getenv("NBS_PAT")
+                username GITHUB_USER
+                password GITHUB_PAT
             }
         }
     }
