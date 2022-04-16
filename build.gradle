@@ -16,7 +16,7 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/Nano-Beta-Studios/GJAPI")
             credentials {
-                username = System.getenv("GITHUB_MAIN")
+                username = 'Jacobs-Develop'
                 password = System.getenv("NBS_PAT")
             }
         }
